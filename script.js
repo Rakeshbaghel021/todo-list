@@ -13,7 +13,7 @@ function enterKey(event) {
     }
 }
 function display(data = todos) {
-    ul.innerHTML = data.map((item, index) => {
+    ul.innerHTML = data.map(( item, index) => {
         return (
             `<li class = "list">
                 <input class = "checkbox" data-id = ${index} ${item.done ? "checked" : ""} type="checkbox">
