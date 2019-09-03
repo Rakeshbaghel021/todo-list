@@ -60,6 +60,8 @@ body {
     text-align: center;
     margin-top: 20px;
     letter-spacing: 0.05rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+                0 25px 50px 0 rgba(0, 0,0.0.1)
 }
 ::placeholder {
     font-style: italic;
@@ -91,8 +93,12 @@ li {
     font-size: 24px;
     border-bottom: 1px solid rgb(216, 216, 216);
     padding: 20px;
-    box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03)
-}
+    /*box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03)
+}*/
+/*border: 1px solid #999;*/
+    box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);}
+
+
 .para {
     display: inline;
     margin-left: 10px;
@@ -109,4 +115,43 @@ li {
 }
 li:hover .delete-button {
     visibility: visible;
+}
+/*.btntypes{
+    text-align: center;
+    padding: 12px;
+
+    }
+.btnall{
+    font-size: 18px;
+    color: grey;
+}
+.btnactive{
+    font-size: 18px;
+     color: grey;
+}
+.btncomplete{
+    font-size: 18px;
+     color: grey;
+}
+.btnclearall{
+    font-size: 18px;
+     color: grey;
+}*/
+.btntypes {
+    text-align: center;
+    padding: 10px 10px;
+    background: #fff;
+    width: 50%;
+    margin-left: 340px; 
+
+
+}
+.btnall,.btnactive,.btncomplete,.btnclearall {
+    padding: 4px 10px;
+    border: none;
+    background: rgb(216, 200, 200);
+    cursor: pointer;
+    font-size: 14px;;
+    color: rgb(151, 151, 151);
+    background: none;
 }
