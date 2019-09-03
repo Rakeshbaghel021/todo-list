@@ -1,7 +1,11 @@
 const input = document.querySelector(".input-text");
-// const button = document.querySelector("button");
+const button = document.querySelector("button");
 const ul = document.querySelector("ul");
-
+const btnall=document.querySelector(".btnall");
+const activ=document.querySelector(".btnactive");
+const comp=document.querySelector(".btncomplete");
+const clear=document.querySelector(".btnclearall");
+var done;
 let todos =JSON.parse(localStorage.getItem("todos")) || [];
 
 function enterKey(event) {
@@ -43,8 +47,31 @@ function handleCheck(event) {
         todos[checkId].done = !todos[checkId].done; 
     }
 }
+function active() {
+    const act=todos.filter((data)=>data.done==false);
+    display(act);
+
+
+}
+function complted() {
+     done=todos.filter((event)=>event.done);
+    display(done);
+
+}
+function alltodo() {
+    display(todos);
+}
+function allclear() {
+    var clearall=[];
+   display(clearall);
+
+}
 
 
 input.addEventListener("keyup", enterKey);
 ul.addEventListener("click", handleDelete);
 ul.addEventListener("click", handleCheck);
+btnall.addEventListener("click",alltodo);
+activ.addEventListener("click",active);
+comp.addEventListener("click",complted);
+clear.addEventListener("click",allclear);
