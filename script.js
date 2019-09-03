@@ -50,17 +50,23 @@ function handleCheck(event) {
 function active() {
     const act=todos.filter((data)=>data.done==false);
     display(act);
-
-
 }
+
+// function to display complted task
+
 function complted() {
      done=todos.filter((event)=>event.done);
     display(done);
 
 }
+// function to display alltodos
+
 function alltodo() {
     display(todos);
 }
+
+// function to clear all list
+
 function allclear() {
     var clearall=[];
    display(clearall);
