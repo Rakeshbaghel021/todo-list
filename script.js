@@ -67,7 +67,7 @@ function alltodo() {
 
 // function to clear all list
 
-function allclear() {
+function allclear(){
     var clearall=[];
    display(clearall);
 
